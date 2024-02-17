@@ -1,36 +1,21 @@
 
+function getId(id){
 
-const getId=(id)=>{
+const element=document.getElementById(id);
+return element;
 
-    const element=document.getElementById(id);
-    return element;
+};
 
+function setBg(id,color){
 
-}
+getId(id).classList.add(color)
 
-function setInnerText(id,value){
-
-const element=getId(id);
-element.innerText='Ans :'+value;
-
-}
+};
 
 
-function getValueById(id){
+function removeBg(id){
 
-let value=getId(id).value;
-value=parseInt(value)
-return value;
+    getId(id).classList.add('bg-white')
 
+};
 
-
-}
-
-function setValueInContainer(text){
-
-const p=document.createElement('p');
-p.innerText='Area '+text;
-const element=getId('container');
-element.appendChild(p)
-
-}
